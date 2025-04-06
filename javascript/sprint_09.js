@@ -17,15 +17,22 @@ class Paragraph_01 {
 const p_01 = new Paragraph_01();
 p_01.text = 'A paragraph is a series of sentences that are organized and coherent.';
 document.querySelector('.out-1').append(p_01.render());
-const p_11 = new Paragraph_01();
-p_11.text = 'It is not so simple, how people usually think.';
-document.querySelector('.out-11').append(p_11.render());
 // Task 02
 // Создайте класс Paragraph_02. Скопируйте в него реализацию свойств и методов из Paragraph_01. Допишите конструктор, который принимает текст и присваивает его свойству text класса. Кстати, надеюсь вы догадались указать, что метод render возвращает тип HTMLParagraphElement.
-// тут пишем класс
+class Paragraph_02 {
+    text;
+    constructor(text) {
+        this.text = text;
+    }
+    render() {
+        const p = document.createElement('p');
+        p.textContent = this.text;
+        return p;
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const p_02 = new Paragraph_02('В раю без изменений.');
-// document.querySelector('.out-2').append(p_02.render());
+const p_02 = new Paragraph_02('В раю без изменений.');
+document.querySelector('.out-2').append(p_02.render());
 // Task 03
 // Создайте класс Paragraph_03. Скопируйте в него реализацию свойств и методов из Paragraph_02. Добавьте свойство bold типа boolean, которое по умолчанию равно false. В метод render() добавьте строку, которая проверяет свойство bold и если оно равно true, оборачивает весь текст внутри параграфа тегом b. В конструктор добавьте вторым аргументом свойство bold.
 // тут пишем класс

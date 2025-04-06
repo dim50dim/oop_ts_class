@@ -7,7 +7,7 @@
 constructor(text: string = '') {
     this.text = text;
 }
- render()  {
+ render() :HTMLParagraphElement  {
      const p = document.createElement('p');
      p.textContent = this.text;
      return p;
@@ -21,17 +21,25 @@ const p_01 = new Paragraph_01();
 p_01.text = 'A paragraph is a series of sentences that are organized and coherent.';
 document.querySelector('.out-1').append(p_01.render());
 
-const p_11 = new Paragraph_01();
-p_11.text = 'It is not so simple, how people usually think.';
-document.querySelector('.out-11').append(p_11.render());
+
 // Task 02
 // Создайте класс Paragraph_02. Скопируйте в него реализацию свойств и методов из Paragraph_01. Допишите конструктор, который принимает текст и присваивает его свойству text класса. Кстати, надеюсь вы догадались указать, что метод render возвращает тип HTMLParagraphElement.
-
-// тут пишем класс
+ 
+class Paragraph_02 {
+     text : string;
+     constructor(text : string){
+        this.text = text;
+     }
+     render () : HTMLParagraphElement {
+        const p = document.createElement('p');
+        p.textContent = this.text;
+        return p;
+     }
+}
 
 // Для проверки кода снимите комментарий ниже
-// const p_02 = new Paragraph_02('В раю без изменений.');
-// document.querySelector('.out-2').append(p_02.render());
+const p_02 = new Paragraph_02('В раю без изменений.');
+document.querySelector('.out-2').append(p_02.render());
 
 
 // Task 03
