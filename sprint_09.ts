@@ -2,7 +2,17 @@
 
 // Task 01
 // Создайте класс Paragraph_01 содержащий следующие свойства: text - текст внутри параграфа. Тип укажите самостоятельно. Реализуйте метод render который создает объект p (тег параграф), добавляет в него текст из свойства text и возвращает параграф. 
-
+ class Paragraph_01 {
+   text: string;
+constructor(text: string) {
+    this.text = text;
+}
+ render() {
+     const p = document.createElement('p');
+     p.textContent = this.text;
+     return p;
+ }
+ }
 // тут пишем класс
 
 
