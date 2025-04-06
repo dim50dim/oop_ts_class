@@ -13,15 +13,17 @@ constructor(text: string = '') {
      return p;
  }
  }
-// тут пишем класс
 
+ 
 
 // Для проверки кода снимите комментарий ниже. После проверки - можно вернуть комментарий, чтобы не мешал вывод. Для остальных задач - аналогично.
 const p_01 = new Paragraph_01();
 p_01.text = 'A paragraph is a series of sentences that are organized and coherent.';
 document.querySelector('.out-1').append(p_01.render());
 
-
+const p_11 = new Paragraph_01();
+p_11.text = 'It is not so simple, how people usually think.';
+document.querySelector('.out-11').append(p_11.render());
 // Task 02
 // Создайте класс Paragraph_02. Скопируйте в него реализацию свойств и методов из Paragraph_01. Допишите конструктор, который принимает текст и присваивает его свойству text класса. Кстати, надеюсь вы догадались указать, что метод render возвращает тип HTMLParagraphElement.
 
