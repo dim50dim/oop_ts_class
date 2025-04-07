@@ -135,7 +135,23 @@ console.log(ul_07);
 document.querySelector('.out-7').append(ul_07.render());
 // Task 08
 // Напишите класс List_08 (скопируйте код предыдущего класса в него), который может принимать объект - data_08 и на основе его генерировать список (ol, или ul). Реализуйте свойство type, которое может принимать строку или 'ul' или 'ol', свойство по умолчанию равно 'ul'. Внесите необходимые изменения в конструктор и метод render(). Сделайте так, что свойство type необязательное.
-// тут пишем класс
+class List_08 {
+    data;
+    type;
+    constructor(data, type = 'ul') {
+        this.data = data;
+        this.type = type;
+    }
+    render() {
+        const list = document.createElement(this.type);
+        for (let item of this.data) {
+            const li = document.createElement('li');
+            li.textContent = item;
+            list.append(li);
+        }
+        return list;
+    }
+}
 // Для проверки кода снимите комментарий ниже
 // const data_08 = {
 //     data: ['Нужно работать, а не вспоминать.', 'Даже у оружия нервы не в порядке.'],
