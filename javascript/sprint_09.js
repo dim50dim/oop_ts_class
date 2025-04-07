@@ -105,20 +105,34 @@ class ParagraphExample {
     }
 }
 // Для проверки кода снимите комментарий ниже
-// const obj_06: { text: string, wrap: string } = {
-//     text: 'Если у нас правда есть души, они сотканы из любви...',
-//     wrap: 'div'
-// }
-// const p_06 = new ParagraphExample(obj_06);
-// console.log(p_06);
-// document.querySelector('.out-6').append(p_06.render());
+const obj_06 = {
+    text: 'Если у нас правда есть души, они сотканы из любви...',
+    wrap: 'div'
+};
+const p_06 = new ParagraphExample(obj_06);
+console.log(p_06);
+document.querySelector('.out-6').append(p_06.render());
 // Task 07
 // Напишите класс List_07, который принимает свойство data тип - массив строк. Возвращает список ul с перечислением данных элементов. Генерация списка производится методом render().
-// тут пишем класс
+class List_07 {
+    data;
+    constructor(data) {
+        this.data = data;
+    }
+    render() {
+        const ul = document.createElement('ul');
+        for (let item of this.data) {
+            const li = document.createElement('li');
+            li.textContent = item;
+            ul.append(li);
+        }
+        return ul;
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const ul_07 = new List_07(['Нужно работать, а не вспоминать.', 'Даже у оружия нервы не в порядке.']);
-// console.log(ul_07);
-// document.querySelector('.out-7').append(ul_07.render());
+const ul_07 = new List_07(['Нужно работать, а не вспоминать.', 'Даже у оружия нервы не в порядке.']);
+console.log(ul_07);
+document.querySelector('.out-7').append(ul_07.render());
 // Task 08
 // Напишите класс List_08 (скопируйте код предыдущего класса в него), который может принимать объект - data_08 и на основе его генерировать список (ol, или ul). Реализуйте свойство type, которое может принимать строку или 'ul' или 'ol', свойство по умолчанию равно 'ul'. Внесите необходимые изменения в конструктор и метод render(). Сделайте так, что свойство type необязательное.
 // тут пишем класс

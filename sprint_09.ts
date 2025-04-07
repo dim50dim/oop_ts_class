@@ -132,24 +132,40 @@ class ParagraphExample {
 }
 
 // Для проверки кода снимите комментарий ниже
-// const obj_06: { text: string, wrap: string } = {
-//     text: 'Если у нас правда есть души, они сотканы из любви...',
-//     wrap: 'div'
-// }
-// const p_06 = new ParagraphExample(obj_06);
-// console.log(p_06);
-// document.querySelector('.out-6').append(p_06.render());
+const obj_06: { text: string, wrap: string } = {
+    text: 'Если у нас правда есть души, они сотканы из любви...',
+    wrap: 'div'
+}
+const p_06 = new ParagraphExample(obj_06);
+console.log(p_06);
+document.querySelector('.out-6').append(p_06.render());
 
 
 // Task 07
 // Напишите класс List_07, который принимает свойство data тип - массив строк. Возвращает список ul с перечислением данных элементов. Генерация списка производится методом render().
+  class List_07 {
+    data : string[];
 
-// тут пишем класс
+    constructor(data:string[]){
+        this.data = data;
+    }
+    render() : HTMLUListElement {
+        const ul = document.createElement('ul');
+
+        for(let item of this.data) {
+            const li = document.createElement('li');
+            li.textContent = item;
+            ul.append(li);
+        }
+        return ul; 
+    }
+  }
+
 
 // Для проверки кода снимите комментарий ниже
-// const ul_07 = new List_07(['Нужно работать, а не вспоминать.', 'Даже у оружия нервы не в порядке.']);
-// console.log(ul_07);
-// document.querySelector('.out-7').append(ul_07.render());
+const ul_07 = new List_07(['Нужно работать, а не вспоминать.', 'Даже у оружия нервы не в порядке.']);
+console.log(ul_07);
+document.querySelector('.out-7').append(ul_07.render());
 
 
 // Task 08
