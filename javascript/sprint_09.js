@@ -35,10 +35,29 @@ const p_02 = new Paragraph_02('В раю без изменений.');
 document.querySelector('.out-2').append(p_02.render());
 // Task 03
 // Создайте класс Paragraph_03. Скопируйте в него реализацию свойств и методов из Paragraph_02. Добавьте свойство bold типа boolean, которое по умолчанию равно false. В метод render() добавьте строку, которая проверяет свойство bold и если оно равно true, оборачивает весь текст внутри параграфа тегом b. В конструктор добавьте вторым аргументом свойство bold.
-// тут пишем класс
+class Paragraph_03 {
+    text;
+    bold = false;
+    constructor(text, bold) {
+        this.text = text;
+        this.bold = bold;
+    }
+    render() {
+        const p = document.createElement('p');
+        if (this.bold) {
+            const b = document.createElement('b');
+            b.textContent = this.text;
+            p.appendChild(b);
+        }
+        else {
+            p.textContent = this.text;
+        }
+        return p;
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const p_03 = new Paragraph_03('Земля – это память, за которую стоит бороться.', false);
-// document.querySelector('.out-3').append(p_03.render());
+const p_03 = new Paragraph_03('Земля – это память, за которую стоит бороться.', false);
+document.querySelector('.out-3').append(p_03.render());
 // Task 04
 // Внесите изменение в предыдущий класс, сделав свойство bold, в функции конструкторе - необязательным.
 // Для проверки кода снимите комментарий ниже
