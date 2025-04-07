@@ -68,7 +68,7 @@ render () : HTMLParagraphElement {
 
 
 // Для проверки кода снимите комментарий ниже
-const p_03 = new Paragraph_03('Земля – это память, за которую стоит бороться.', true);
+const p_03 = new Paragraph_03('Земля – это память, за которую стоит бороться.', false);
 document.querySelector('.out-3').append(p_03.render());
 
 // Task 04
