@@ -83,11 +83,33 @@ document.querySelector('.out-4').append(p_04.render());
 // Task 05
 // Создайте класс Paragraph_05, в который скопируйте содержимое класса Paragraph_03. Внесите изменения в конструктор - удаляйте пробелы по краям текста перед присвоением в свойство text. Добавьте изменение в метод render(), при выводе текста первая буква должна быть заглавной всегда.
 
-class 
+class Paragraph_05 {
+    text : string;
+    bold: boolean;
+      constructor(text: string, bold:boolean = false){
+        this.text = text.trim();
+        this.bold = bold;
+      }
+      render() : HTMLParagraphElement {
+        const p = document.createElement('p');
+                 const capital = this.text.charAt(0).toUpperCase() + this.text.slice(1);
+
+                 if(this.bold){
+                    const b = document.createElement('b');
+                    b.textContent = capital;
+                    p.append(b);
+                 }else{
+                    p.textContent = capital;
+                 }
+                 return p;
+      }
+      
+      
+}
 
 // Для проверки кода снимите комментарий ниже
-// const p_05 = new Paragraph_05('  и смерти нет почётней той, что ты принять готов за кости пращуров своих, за храм своих богов.  ');
-// document.querySelector('.out-5').append(p_05.render());
+const p_05 = new Paragraph_05('  и смерти нет почётней той, что ты принять готов за кости пращуров своих, за храм своих богов.  ');
+document.querySelector('.out-5').append(p_05.render());
 
 
 // Task 06
