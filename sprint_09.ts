@@ -47,8 +47,8 @@ document.querySelector('.out-2').append(p_02.render());
 
 class Paragraph_03 {
     text: string;
-    bold: boolean = false ;
-    constructor(text: string, bold: boolean){
+    bold: boolean = false;
+    constructor(text: string, bold? : boolean){
         this.text = text;
         this.bold = bold;
     }
@@ -75,15 +75,15 @@ document.querySelector('.out-3').append(p_03.render());
 // Внесите изменение в предыдущий класс, сделав свойство bold, в функции конструкторе - необязательным.
 
 // Для проверки кода снимите комментарий ниже
-// const p_04 = new Paragraph_03('Земля – это память, за которую стоит бороться.');
-// document.querySelector('.out-4').append(p_04.render());
+const p_04 = new Paragraph_03('Земля – это память, за которую стоит бороться.');
+document.querySelector('.out-4').append(p_04.render());
 
 
 
 // Task 05
 // Создайте класс Paragraph_05, в который скопируйте содержимое класса Paragraph_03. Внесите изменения в конструктор - удаляйте пробелы по краям текста перед присвоением в свойство text. Добавьте изменение в метод render(), при выводе текста первая буква должна быть заглавной всегда.
 
-// тут пишем класс
+class 
 
 // Для проверки кода снимите комментарий ниже
 // const p_05 = new Paragraph_05('  и смерти нет почётней той, что ты принять готов за кости пращуров своих, за храм своих богов.  ');
