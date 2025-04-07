@@ -58,7 +58,7 @@ render () : HTMLParagraphElement {
     if(this.bold){
         const b = document.createElement('b');
         b.textContent  = this.text;
-        p.appendChild(b);
+        p.append(b);
     }else{
         p.textContent = this.text;
     }
@@ -68,7 +68,7 @@ render () : HTMLParagraphElement {
 
 
 // Для проверки кода снимите комментарий ниже
-const p_03 = new Paragraph_03('Земля – это память, за которую стоит бороться.', false);
+const p_03 = new Paragraph_03('Земля – это память, за которую стоит бороться.', true);
 document.querySelector('.out-3').append(p_03.render());
 
 // Task 04
