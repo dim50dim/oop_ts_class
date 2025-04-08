@@ -199,10 +199,15 @@ document.querySelector('.out-9').append(ul_09.render());
 // Task 11
 // Класс может содержать только метод. Создайте класс ConsoleMessage, который содержит только метод void, метод выводит в консоль то, что принимает в качестве аргумента. Имя метода - say.
 // тут пишем класс
+class ConsoleMessage {
+    say(str) {
+        console.log(str);
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const m_11 = new ConsoleMessage();
-// console.log(m_11);
-// m_11.say('hello');
+const m_11 = new ConsoleMessage();
+console.log(m_11);
+m_11.say('hello');
 // Task 12
 // Создайте класс Cart, который содержит только один метод total (возвращает число), метод может принять массив goods (смотрите сам объект) и возвращает сумму товаров в нем. 
 // тут пишем класс
