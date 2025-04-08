@@ -289,7 +289,15 @@ console.log(cart_01.total(goods));
 // Life : 063, 073, 093
 // Kyivstar : 067, 068, 096, 097, 098
 
-// тут пишем класс
+class CellOperator{
+    code : string;
+    constructor(code: string){
+        this.code = code;
+    }
+    operator():string {
+            
+    }
+}
 
 // Для проверки кода снимите комментарий ниже
 

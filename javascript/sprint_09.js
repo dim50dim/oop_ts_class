@@ -228,7 +228,14 @@ console.log(cart_01.total(goods));
 // Vodafone : 050,066, 095, 0999
 // Life : 063, 073, 093
 // Kyivstar : 067, 068, 096, 097, 098
-// тут пишем класс
+class CellOperator {
+    code;
+    constructor(code) {
+        this.code = code;
+    }
+    operator() {
+    }
+}
 // Для проверки кода снимите комментарий ниже
 // let cell_01 = new CellOperator('093');
 // console.log(cell_01.operator()); // Ожидаю Life
