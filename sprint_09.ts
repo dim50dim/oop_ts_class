@@ -239,13 +239,27 @@ document.querySelector('.out-9').append(ul_09.render());
 // Task 10
 // Создайте класс ModernString, содержащий свойство data - строка. Создайте конструктор, который будет заполнять данное свойство. Создайте метод after, который может принять строку и добавить в конец строки записанной в свойстве data (свойство data изменяется). Метод должен возвращать новое свойство data. Создайте метод before, который может принять строку и добавить в начало строки записанной в свойстве data (свойство data изменяется). Метод должен возвращать новое свойство data. 
 
-// тут пишем класс
+class ModernString{
+    data : string;
+    constructor(data:string) {
+             this.data  = data;
+    }
+
+    after(str:string) : string {
+        this.data += str;
+        return this.data;
+    } 
+    before(str:string ):string {
+        this.data= str + this.data;
+        return this.data;
+    }
+}
 
 // Для проверки кода снимите комментарий ниже
-// const s_10 = new ModernString('cd');
-// console.log(s_10);
-// console.log(s_10.after('ef')); // ожидаю cdef
-// console.log(s_10.before('ab')); // ожидаю abcdef
+const s_10 = new ModernString('cd');
+console.log(s_10);
+console.log(s_10.after('ef')); // ожидаю cdef
+console.log(s_10.before('ab')); // ожидаю abcdef
 
 
 // Task 11
@@ -329,7 +343,7 @@ console.log(cell_01.operator()); // Ожидаю Life
 class Palindrome{
     str : string;
     isPalindrome : boolean = false;
-    
+
     constructor (str:string){
         this.str= str;
     }
