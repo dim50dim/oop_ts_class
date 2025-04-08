@@ -210,15 +210,19 @@ console.log(m_11);
 m_11.say('hello');
 // Task 12
 // Создайте класс Cart, который содержит только один метод total (возвращает число), метод может принять массив goods (смотрите сам объект) и возвращает сумму товаров в нем. 
-// тут пишем класс
+class Cart {
+    total(goods) {
+        return goods.reduce((sum, item) => sum += item.amount, 0);
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const goods : {articul: string, price: number, amount: number}[] = [
-//     {articul : 'mon234', price : 3600, amount : 3},
-//     {articul : 'lap839', price : 43400, amount : 2},
-//     {articul : 'ups002', price : 980, amount : 1},
-// ];
-// let cart_01 = new Cart();
-// console.log(cart_01.total(goods));
+const goods = [
+    { articul: 'mon234', price: 3600, amount: 3 },
+    { articul: 'lap839', price: 43400, amount: 2 },
+    { articul: 'ups002', price: 980, amount: 1 },
+];
+let cart_01 = new Cart();
+console.log(cart_01.total(goods));
 // Task 13
 // Создайте класс CellOperator, который содержит свойство code - string, свойство задается при создании объекта и метод operator(), который возвращает название оператора в зависимости от кода. Для определения оператора воспользуйтесь таблицей ниже. Если оператор не найден - возвращается пустая строка.
 // Vodafone : 050,066, 095, 0999
