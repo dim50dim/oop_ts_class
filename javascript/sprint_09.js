@@ -234,11 +234,22 @@ class CellOperator {
         this.code = code;
     }
     operator() {
+        const vodafone = ['050', '066', '095', '0999'];
+        const life = ['063', '073', '093'];
+        const kyivstar = ['067', '068', '096', '097', '098'];
+        if (vodafone.includes(this.code))
+            return 'Vodafone';
+        if (life.includes(this.code))
+            return 'Life';
+        if (kyivstar.includes(this.code))
+            return 'Kyivstart';
+        else
+            return '';
     }
 }
 // Для проверки кода снимите комментарий ниже
-// let cell_01 = new CellOperator('093');
-// console.log(cell_01.operator()); // Ожидаю Life
+let cell_01 = new CellOperator('063');
+console.log(cell_01.operator()); // Ожидаю Life
 // Task 14
 // Создайте класс CellPhone в который скопируйте код из CellOperator. Добавьте свойство phone тип string. Измените конструктор так, чтобы он принимал номер телефона в виде строки '+380730010113' после чего разделял данную строку на части. В свойство code класса заносился код - символі 073 для данного номера, а в свойство phone - символы 0010113. Метод operator не меняем. 
 // тут пишем класс

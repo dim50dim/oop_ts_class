@@ -294,15 +294,23 @@ class CellOperator{
     constructor(code: string){
         this.code = code;
     }
-    operator():string {
-            
+    operator(): string  {
+        const vodafone = ['050', '066', '095', '0999'];
+        const life = ['063', '073', '093'];
+        const kyivstar = ['067', '068', '096', '097', '098'];
+
+        if(vodafone.includes(this.code)) return 'Vodafone';
+        if(life.includes(this.code)) return 'Life';
+        if(kyivstar.includes(this.code)) return 'Kyivstart';
+        else return '';
     }
+    
 }
 
 // Для проверки кода снимите комментарий ниже
 
-// let cell_01 = new CellOperator('093');
-// console.log(cell_01.operator()); // Ожидаю Life
+let cell_01 = new CellOperator('063');
+console.log(cell_01.operator()); // Ожидаю Life
 
 
 // Task 14
