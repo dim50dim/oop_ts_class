@@ -328,12 +328,12 @@ console.log(cell_01.operator()); // Ожидаю Life
 
 class Palindrome{
     str : string;
-    isPalindrom : boolean = false;
+    isPalindrome : boolean = false;
     constructor (str:string){
         this.str= str;
     }
-    check() : boolean {
-        return this.str === this.str.split('').reverse().join('');
+    check() : void {
+         this.isPalindrome = this.str === this.str.split('').reverse().join('');
     }
 }
 
