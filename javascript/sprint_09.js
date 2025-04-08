@@ -258,7 +258,11 @@ console.log(cell_01.operator()); // Ожидаю Life
 // console.log(cell_02);
 // Task 15
 // Создайте класс Palindrome, который принимает в конструкторе строку и записывает в свойство str. Напишите метод check(), который заносит в свойство isPalindrome (по умолчанию false) true, если строка в str является палиндромом, и false если не является. 
-// тут пишем класс
+class Palindrome {
+    str;
+    check() {
+    }
+}
 // Для проверки кода снимите комментарий ниже
 // let pal_01 = new Palindrome('sos');
 // pal_01.check();
