@@ -329,6 +329,7 @@ console.log(cell_01.operator()); // Ожидаю Life
 class Palindrome{
     str : string;
     isPalindrome : boolean = false;
+    
     constructor (str:string){
         this.str= str;
     }
